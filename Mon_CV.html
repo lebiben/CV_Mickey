@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin">
+    <link rel="stylesheet" href="style.css" />
+    <title>Mon CV</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+	/* Menu selector routine */
+	$(document).ready(function(){
+		$(".menuitem").click(function(){
+	    $(".menuitem").removeClass('selected');
+	    $(this).addClass('selected');
+		});
+	});
+
+	/* Set the width of the side navigation to 15% and the left margin of the page content to 4% + 4% and add a black background color to body */
+	function openMenu() {
+		document.getElementById("monMenu").style.width = "15%";
+		document.getElementById("bloc_liz").style.marginLeft = "4%";
+		document.getElementById("bloc_cv").style.marginLeft = "4%";
+		//document.body.style.backgroundColor = "rgba(0,0,0,0.4)"; /* For black background color opacity to body */
+	}
+
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+	function closeMenu() {
+		document.getElementById("monMenu").style.width = "0";
+		document.getElementById("bloc_liz").style.marginLeft = "0";
+		document.getElementById("bloc_cv").style.marginLeft = "0";
+		//document.body.style.backgroundColor = "white"; /* For background color of body to white */
+
+		/* Reset menu selector */
+		$(document).ready(function(){
+			$(".menuitem").removeClass('selected');
+		});
+	}
+
+	/* Set the width of the side navigation to 15% and the left margin of the page content to 4% + 4% and add a black background color to body */
+	function openImg() {
+		document.getElementById("maPhoto").style.width = "100%";
+	}
+
+	/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+	function closeImg() {
+		document.getElementById("maPhoto").style.width = "0";
+	}
+
+	</script>
+
+</head>
+
+
+<body>
+
+	<div id="bloc_page">
+
+		<aside id="bloc_liz">
+
+		<nav id="monMenu" class="sidenav">
+  			<a href="#" class="closebtn" onclick="closeMenu()">&times;</a>
+			<a href="#apropos" class="menuitem">À Propos</a>
+  			<a href="#experience" class="menuitem">Expérience</a>
+  			<a href="#competences" class="menuitem">Compétences</a>
+  			<a href="#formation" class="menuitem">Formation</a>
+  			<a href="https://www.facebook.com/mickey.maouw" target="_blank" class="menuitem">Contact</a>
+		</nav>
+
+		<!-- Use any element to open the sidenav -->
+		<div id="btn_open" onclick="openMenu()">&#9776; Menu</div>
+
+		</aside>
+
+		<section id="bloc_cv">
+
+			<header class="item" id="apropos">
+
+			<h1>Mickey Mouse</h1>
+				<p class="intro">		
+					Je suis connu et reconnu dans le monde entier pour ma célèbre silhouette formée de trois cercles devenue indissociable de la marque Disney
+				</p>
+		
+			</header>
+
+			<div id="items">
+			
+				<article class="item" id="experience">
+					
+				<h2>Mon expérience</h2>
+		    
+					<ul>
+						<li><strong>1928 :</strong> Premiers courts métrages</li>
+						<li><strong>1930 :</strong> Premières apparitions en bandes dessinées et en poupée</li>
+						<li><strong>1933 :</strong> Premier dessin-animé en couleur "Les 3 petits cochons" de Disney sort en salles</li>
+						<li><strong>De 1995 à 1999 :</strong> Premiers longs métrages dont notamment "Dingo et Max" ainsi que "Il était une fois Noël"</li>
+						<li><strong>1999 à aujourd'hui :</strong> Succès international sur tous les supports et mascotte légendaire des Studios Walt Disney, notamment dans mes parcs d'attraction qui font le tour du Monde</li>
+					</ul>
+			
+				</article>
+			
+				<article class="item" id="competences">
+
+				<h2>Mes compétences</h2>
+		    
+					<ul>
+						<li>Souris anthropomorphique</li>
+						<li>Voix de fausset</li>
+						<li>Morale irréprochable</li>
+					</ul>
+
+				</article>
+
+				<article class="item" id="formation">
+			
+				<h2>Ma formation</h2>
+			
+					<p>Alors là c'est simple... J'ai tout appris de mes Maîtres Walt Disney et Ub Iwerks ;))</p>
+
+				</article>
+
+			</div>
+
+			<footer>
+				<p>
+					Cette page est valide conformément à la recommandation <a href="http://www.w3.org/Style/CSS/current-work.html" target="_blank">CSS niveau 3 + SVG</a> !&nbsp;&nbsp;&nbsp;
+					<a href="https://validator.w3.org/check?uri=referer"><img style="border:0;width:60px;height:20px" src="http://www.w3.org/Icons/valid-html401" alt="HTML Valide !" /></a>&nbsp;&nbsp;&nbsp;
+				    <a href='javascript:(function(){function c(a,b){var c=document.createElement("textarea");c.name=a;c.value=b;d.appendChild(c)}var e=function(a){for(var b="",a=a.firstChild;a;){switch(a.nodeType){case Node.ELEMENT_NODE:b+=a.outerHTML;break;case Node.TEXT_NODE:b+=a.nodeValue;break;case Node.CDATA_SECTION_NODE:b+="<![CDATA["+a.nodeValue+"]]\>";break;case Node.COMMENT_NODE:b+="<\!--"+a.nodeValue+"--\>";break;case Node.DOCUMENT_TYPE_NODE:b+="<!DOCTYPE "+a.name+">\n"}a=a.nextSibling}return b}(document),d=document.createElement("form");d.method="POST";d.action="https://validator.w3.org/nu/";d.enctype="multipart/form-data";d.target="_blank";d.acceptCharset="utf-8";c("showsource","yes");c("content",e);document.body.appendChild(d);d.submit()})();'>
+				        <img style="border:0;width:60px;height:20px"
+				            src="http://jigsaw.w3.org/css-validator/images/vcss"
+				            alt="CSS Valide !" />
+				    </a><br>
+				    <a href="http://www.whatismyreferer.com/">Check my referrer !</a>
+				</p>
+			</footer>
+
+		</section>
+
+		<aside id="bloc_photo">
+	
+			<a onclick="openImg()"><img src="img/Ma_Photo_mini.png" class="maphoto" alt="Ma Photo" title="Cliquez pour agrandir" /></a>
+
+				<div id="maPhoto" class="sidenav">
+		  			<a class="closebtn" onclick="closeImg()">&times;</a>
+					<img src="img/Ma_Photo.png" alt="Ma Photo" />
+				</div>
+
+		</aside>
+
+	</div>
+		
+</body>
+
+</html>
